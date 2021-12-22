@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">The Great ASEAN</string>
+    <string name="country_name">Country Name</string>
+    <string name="detail">Detail</string>
+    <string name="location">LOCATION</string>
+    <string name="favorite">FAVORITE</string>
+    <string name="share">SHARE</string>
+    <string name="data_received">Data Received</string>
+    <string name="head_of_state">Pemimpin Negara</string>
+    <string name="title">Title</string>
+    <string name="the_great_asean">ASEAN Info</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="about">about</string>
+    <string name="content_description_about">Berisi halaman about tentang sayaa</string>
+    <string name="page_title">The Great ASEAN</string>
+    <string name="name_received">Data Name Received</string>
+    <string name="email_received">Email Received</string>
+    <string name="about_me">About Me</string>
+    <string name="maps">MAPS</string>
+    <string name="extended_fab_content_desc" />
+    <string name="city_received">City Received</string>
+    <string name="phone_number_received">Phone Number Received</string>
+    <string name="no_hp_received">No.HP Received</string>
+    <string name="school_received">School Received</string>
+    <string name="about_me_content">Saya adalah mahasiswa semester 3 dari jurusan Informatika UPN \"Veteran\" Jawa Timur. Saat ini saya sedang mengikuti kelas Belajar Membuat Aplikasi Android untuk Pemula. Materi yang lengkap dan adanya latihan membikin aplikasi membuat saya penasaran dengan fitur-fitur menarik android lainnya.\n\nSaya sangat senang diberi kesempatan untuk belajar di Dicoding Academy. Dengan begitu saya menjadi semangat belajar membuat aplikasi Android dan berkeinginan menjadi Android Developer Expert. Terima kasih Dicoding.</string>
+    <string name="source">Source:</string>
+    <string name="source_link">https://tirto.id/profil-10-negara-asean-beserta-ibu-kota-dan-keterangan-lainnya-gjBz</string>
+</resources>

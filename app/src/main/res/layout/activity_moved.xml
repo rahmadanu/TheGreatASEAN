@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MovedActivity"
+    android:background="#DCDCDC"
+    android:contextClickable="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/moved_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.Toolbar.Primary">
+
+    </androidx.appcompat.widget.Toolbar>
+
+        <ImageView
+            android:id="@+id/countryView_data_received"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:scaleType="fitXY"
+            android:layout_below="@id/moved_toolbar"
+            tools:src="@tools:sample/avatars"/>
+
+    <TextView
+        android:id="@+id/tv_head_of_state_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:layout_below="@id/countryView_data_received"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/head_of_state"/>
+
+    <RelativeLayout
+        android:id="@+id/relative_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_head_of_state_title"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_head_of_state"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="16dp"
+            tools:src="@tools:sample/avatars"/>
+
+        <TextView
+            android:id="@+id/tv_head_of_state"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_marginTop="25dp"
+            android:layout_toEndOf="@id/iv_head_of_state"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/relative_head"
+        android:background="@android:color/darker_gray"/>
+
+    <TextView
+        android:id="@+id/tv_about"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@id/relative_head"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="About"/>
+
+    <RelativeLayout
+        android:id="@+id/relative_about"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_about"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp">
+
+        <ImageView
+            android:id="@+id/countryFlag_data_received"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="16dp"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/countryName_data_received"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:textSize="18sp"
+            android:layout_toEndOf="@id/countryFlag_data_received" />
+
+    </RelativeLayout>
+
+    <TextView
+        style="@style/TextContent"
+        android:id="@+id/tv_data_received"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_below="@id/relative_about"
+        android:text="@string/data_received"/>
+
+        <TextView
+            style="@style/TextContent"
+            android:id="@+id/source_title"
+            android:layout_marginStart="16dp"
+            android:text="@string/source"
+            android:layout_below="@id/tv_data_received"/>
+
+        <TextView
+            style="@style/TextContent"
+            android:id="@+id/source_link"
+            android:layout_marginBottom="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_below="@+id/source_title"
+            android:textIsSelectable="true"
+            android:textStyle="italic"
+            android:text="@string/source_link"
+            android:autoLink="web"
+            android:textColorLink="@android:color/tab_indicator_text"/>
+
+    </RelativeLayout>
+
+</ScrollView>
