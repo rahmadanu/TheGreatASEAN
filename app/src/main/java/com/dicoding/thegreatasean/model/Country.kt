@@ -1,4 +1,4 @@
-package com.dicoding.thegreatasean
+package com.dicoding.thegreatasean.model
 
 data class Country (
     var name: String = "",
@@ -8,5 +8,3 @@ data class Country (
     var headOfStateName: String = "",
     var headOfStatePhoto: Int = 0
 )
-{
-}

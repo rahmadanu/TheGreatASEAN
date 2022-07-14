@@ -1,10 +1,11 @@
-package com.dicoding.thegreatasean
+package com.dicoding.thegreatasean.ui
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import com.dicoding.thegreatasean.R
 
 class AboutActivity: AppCompatActivity(){
 
@@ -15,8 +16,6 @@ class AboutActivity: AppCompatActivity(){
         const val EXTRA_PHONE = "extra_phone"
         const val EXTRA_SCHOOL = "extra_school"
     }
-
-    //test
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,18 +48,20 @@ class AboutActivity: AppCompatActivity(){
         val textSchool = "$school"
         tvSchoolReceived.text = textSchool
 
-        aboutToolbar()
+        setupActionBar()
     }
 
-    private fun aboutToolbar() {
+    private fun setupActionBar() {
         val aboutToolbar: Toolbar = findViewById(R.id.about_toolbar)
         setSupportActionBar(aboutToolbar)
 
-        aboutToolbar.setNavigationIcon(R.drawable.ic_baseline_arrow_back_24)
-        aboutToolbar.setNavigationOnClickListener {
-            val intentBack = Intent(this@AboutActivity, MainActivity::class.java)
-            startActivity(intentBack)
+        val actionBar = supportActionBar
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true)
+            actionBar.setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_24)
         }
+
+        aboutToolbar.setNavigationOnClickListener { onBackPressed() }
     }
 }
 

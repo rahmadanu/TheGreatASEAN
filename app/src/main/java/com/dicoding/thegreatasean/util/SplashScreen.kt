@@ -1,9 +1,11 @@
-package com.dicoding.thegreatasean
+package com.dicoding.thegreatasean.util
 
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
+import com.dicoding.thegreatasean.ui.MainActivity
+import com.dicoding.thegreatasean.R
 
 @Suppress("DEPRECATION")
 class SplashScreen : AppCompatActivity() {

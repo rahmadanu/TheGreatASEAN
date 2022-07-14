@@ -25,4 +25,6 @@
     <string name="about_me_content">Saya adalah mahasiswa semester 3 dari jurusan Informatika UPN \"Veteran\" Jawa Timur. Saat ini saya sedang mengikuti kelas Belajar Membuat Aplikasi Android untuk Pemula. Materi yang lengkap dan adanya latihan membikin aplikasi membuat saya penasaran dengan fitur-fitur menarik android lainnya.\n\nSaya sangat senang diberi kesempatan untuk belajar di Dicoding Academy. Dengan begitu saya menjadi semangat belajar membuat aplikasi Android dan berkeinginan menjadi Android Developer Expert. Terima kasih Dicoding.</string>
     <string name="source">Source:</string>
     <string name="source_link">https://tirto.id/profil-10-negara-asean-beserta-ibu-kota-dan-keterangan-lainnya-gjBz</string>
+    <string name="search">search</string>
+    <string name="content_description_search">Fitur search item</string>
 </resources>

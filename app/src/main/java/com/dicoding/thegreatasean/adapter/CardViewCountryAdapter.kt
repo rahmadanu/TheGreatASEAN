@@ -1,12 +1,16 @@
-package com.dicoding.thegreatasean
+package com.dicoding.thegreatasean.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Filter
+import android.widget.Filterable
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.dicoding.thegreatasean.R
+import com.dicoding.thegreatasean.model.Country
 
 class CardViewCountryAdapter(private val listCountry: ArrayList<Country>): RecyclerView.Adapter<CardViewCountryAdapter.CardViewViewHolder>() {
 
@@ -49,7 +53,8 @@ class CardViewCountryAdapter(private val listCountry: ArrayList<Country>): Recyc
     override fun getItemCount(): Int {
         return listCountry.size
     }
-        interface OnItemClickCallback {
-            fun onItemClicked(data: Country)
-        }
+
+    interface OnItemClickCallback {
+        fun onItemClicked(data: Country)
+    }
 }

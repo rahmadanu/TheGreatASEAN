@@ -1,4 +1,6 @@
-package com.dicoding.thegreatasean
+package com.dicoding.thegreatasean.model
+
+import com.dicoding.thegreatasean.R
 
 object CountryData {
     private val countryNames = arrayOf("Brunei Darussalam",
@@ -185,18 +187,21 @@ object CountryData {
                     "Populasi: 92,7 juta jiwa (2016)\n" +
                     "Luas Wilayah: 331.230,8 km persegi.\n")
 
-    private val countryFlags = intArrayOf(R.drawable.brunei_flag,
-            R.drawable.filipina_flag,
-            R.drawable.indonesia_flag,
-            R.drawable.kamboja_flag,
-            R.drawable.laos_flag,
-            R.drawable.malaysia_flag,
-            R.drawable.myanmar_flag,
-            R.drawable.singapura_flag,
-            R.drawable.thailand_flag,
-            R.drawable.vietnam_flag)
+    private val countryFlags = intArrayOf(
+        R.drawable.brunei_flag,
+        R.drawable.filipina_flag,
+        R.drawable.indonesia_flag,
+        R.drawable.kamboja_flag,
+        R.drawable.laos_flag,
+        R.drawable.malaysia_flag,
+        R.drawable.myanmar_flag,
+        R.drawable.singapura_flag,
+        R.drawable.thailand_flag,
+        R.drawable.vietnam_flag
+    )
 
-    private val countryViews = intArrayOf(R.drawable.brunei_view,
+    private val countryViews = intArrayOf(
+        R.drawable.brunei_view,
         R.drawable.filipina_view,
         R.drawable.indonesia_view,
         R.drawable.kamboja_view,
@@ -205,7 +210,8 @@ object CountryData {
         R.drawable.myanmar_view,
         R.drawable.singapura_view,
         R.drawable.thailand_view,
-        R.drawable.vietnam_view)
+        R.drawable.vietnam_view
+    )
 
     private val countryHeadOfStateNames = arrayOf("Sultan Hassanal Bolkiah",
     "Rodrigo Duterte",
@@ -218,18 +224,20 @@ object CountryData {
     "Raja Vajiralongkorn",
     "Nguyen Xuan Phuc")
 
-    private val countryHeadOfStatePhotos = intArrayOf(R.drawable.brunei_sultan_hassanal_bolkiah,
-            R.drawable.filipina_president_rodrigo_duterte,
-            R.drawable.indonesia_president_joko_widodo,
-            R.drawable.kamboja_king_norodom_sihamoni,
-            R.drawable.laos_president_thongloun_sisoulith,
-            R.drawable.malaysia_sultan_abdullah,
-            R.drawable.myanmar_myint_swe,
-            R.drawable.singapura_halimah_yacob,
-            R.drawable.thailand_king_vajiralongkorn,
-            R.drawable.vietnam_president_nguyen_xuan_phuc)
+    private val countryHeadOfStatePhotos = intArrayOf(
+        R.drawable.brunei_sultan_hassanal_bolkiah,
+        R.drawable.filipina_president_rodrigo_duterte,
+        R.drawable.indonesia_president_joko_widodo,
+        R.drawable.kamboja_king_norodom_sihamoni,
+        R.drawable.laos_president_thongloun_sisoulith,
+        R.drawable.malaysia_sultan_abdullah,
+        R.drawable.myanmar_myint_swe,
+        R.drawable.singapura_halimah_yacob,
+        R.drawable.thailand_king_vajiralongkorn,
+        R.drawable.vietnam_president_nguyen_xuan_phuc
+    )
 
-    val listData: ArrayList<Country>
+    val listData: MutableList<Country>
         get() {
             val list = arrayListOf<Country>()
             for (position in countryNames.indices) {

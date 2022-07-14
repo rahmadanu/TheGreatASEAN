@@ -10,11 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TheGreatASEAN">
 
-        <activity android:name=".MainActivity"></activity>
-        <activity android:name=".MovedActivity" />
-        <activity android:name=".AboutActivity" />
+        <activity android:name=".ui.MainActivity" />
+        <activity
+            android:name=".ui.MovedActivity"
+            android:theme="@style/Theme.TheGreatASEAN.NoActionBar"/>
+        <activity
+            android:name=".ui.AboutActivity"
+            android:theme="@style/Theme.TheGreatASEAN.NoActionBar"/>
 
-        <activity android:name=".SplashScreen">
+        <activity
+            android:name=".util.SplashScreen"
+            android:theme="@style/Theme.TheGreatASEAN.NoActionBar">
 
                 <intent-filter>
                     <action android:name="android.intent.action.MAIN" />

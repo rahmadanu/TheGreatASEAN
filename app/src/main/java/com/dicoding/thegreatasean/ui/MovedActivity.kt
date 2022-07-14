@@ -1,4 +1,4 @@
-package com.dicoding.thegreatasean
+package com.dicoding.thegreatasean.ui
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,17 +6,11 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import com.dicoding.thegreatasean.R
 
 class MovedActivity : AppCompatActivity() {
 
-    companion object {
-        const val EXTRA_NAME = "extra_name"
-        const val EXTRA_DETAIL = "extra_detail"
-        const val EXTRA_FLAG = "extra_flag"
-        const val EXTRA_COUNTRYVIEW = "extra_country_view"
-        const val EXTRA_HEADOFSTATEPHOTO = "extra_head_of_state_photo"
-        const val EXTRA_HEADOFSTATENAME = "extra_head_of_state_name"
-    }
+    private lateinit var movedToolbar: Toolbar
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,14 +43,30 @@ class MovedActivity : AppCompatActivity() {
         val textHeadName = "$headName"
         headOfStateName.text = textHeadName
 
-        val movedToolbar: Toolbar = findViewById(R.id.moved_toolbar)
-        setSupportActionBar(movedToolbar)
-
-        movedToolbar.setNavigationIcon(R.drawable.ic_baseline_arrow_back_24)
-        movedToolbar.setNavigationOnClickListener {
-            val intentBack = Intent(this@MovedActivity, MainActivity::class.java)
-            startActivity(intentBack)
-        }
+        movedToolbar = findViewById(R.id.moved_toolbar)
+        movedToolbar.title = "$name"
+        setupActionBar()
     }
 
+    fun setupActionBar() {
+
+        setSupportActionBar(movedToolbar)
+
+        val actionBar = supportActionBar
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true)
+            actionBar.setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_24)
+        }
+
+        movedToolbar.setNavigationOnClickListener { onBackPressed() }
+    }
+
+    companion object {
+        const val EXTRA_NAME = "extra_name"
+        const val EXTRA_DETAIL = "extra_detail"
+        const val EXTRA_FLAG = "extra_flag"
+        const val EXTRA_COUNTRYVIEW = "extra_country_view"
+        const val EXTRA_HEADOFSTATEPHOTO = "extra_head_of_state_photo"
+        const val EXTRA_HEADOFSTATENAME = "extra_head_of_state_name"
+    }
 }
