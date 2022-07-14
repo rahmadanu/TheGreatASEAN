@@ -4,19 +4,15 @@ import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.SearchView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.dicoding.thegreatasean.adapter.CardViewCountryAdapter
 import com.dicoding.thegreatasean.R
+import com.dicoding.thegreatasean.adapter.CardViewCountryAdapter
 import com.dicoding.thegreatasean.model.Country
 import com.dicoding.thegreatasean.model.CountryData
-import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
 
 class MainActivity : AppCompatActivity() {
