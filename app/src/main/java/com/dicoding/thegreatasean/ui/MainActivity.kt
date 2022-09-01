@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity() {
         val cardViewCountryAdapter = CardViewCountryAdapter(list)
         rvCountry.adapter = cardViewCountryAdapter
 
-        cardViewCountryAdapter!!.setOnItemClickCallback(object :
+        cardViewCountryAdapter.setOnItemClickCallback(object :
             CardViewCountryAdapter.OnItemClickCallback {
             override fun onItemClicked (data: Country){
                 showSelectedCountry(data)
@@ -67,6 +67,7 @@ class MainActivity : AppCompatActivity() {
         dataIntent.putExtra(MovedActivity.EXTRA_COUNTRYVIEW, country.view)
         dataIntent.putExtra(MovedActivity.EXTRA_HEADOFSTATEPHOTO, country.headOfStatePhoto)
         dataIntent.putExtra(MovedActivity.EXTRA_HEADOFSTATENAME, country.headOfStateName)
+        dataIntent.putExtra(MovedActivity.EXTRA_LINK, country.link)
         startActivity(dataIntent)
     }
 

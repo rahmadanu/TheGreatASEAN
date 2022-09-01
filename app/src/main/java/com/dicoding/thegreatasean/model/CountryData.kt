@@ -237,6 +237,20 @@ object CountryData {
         R.drawable.vietnam_president_nguyen_xuan_phuc
     )
 
+    private val countryLink = arrayOf(
+        "https://en.wikipedia.org/wiki/Brunei",
+        "https://en.wikipedia.org/wiki/Philippines",
+        "https://en.wikipedia.org/wiki/Indonesia",
+        "https://en.wikipedia.org/wiki/Cambodia",
+        "https://en.wikipedia.org/wiki/Laos",
+        "https://en.wikipedia.org/wiki/Malaysia",
+        "https://en.wikipedia.org/wiki/Myanmar",
+        "https://en.wikipedia.org/wiki/Singapore",
+        "https://en.wikipedia.org/wiki/Thailand",
+        "https://en.wikipedia.org/wiki/Vietnam"
+
+    )
+
     val listData: MutableList<Country>
         get() {
             val list = arrayListOf<Country>()
@@ -248,6 +262,7 @@ object CountryData {
                 country.view = countryViews[position]
                 country.headOfStateName = countryHeadOfStateNames[position]
                 country.headOfStatePhoto = countryHeadOfStatePhotos[position]
+                country.link = countryLink[position]
                 list.add(country)
             }
             return list

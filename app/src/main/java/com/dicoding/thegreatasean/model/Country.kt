@@ -6,5 +6,6 @@ data class Country (
     var flag: Int = 0,
     var view: Int = 0,
     var headOfStateName: String = "",
-    var headOfStatePhoto: Int = 0
+    var headOfStatePhoto: Int = 0,
+    var link: String = ""
 )

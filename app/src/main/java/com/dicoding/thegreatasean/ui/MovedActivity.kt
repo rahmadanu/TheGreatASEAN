@@ -1,6 +1,7 @@
 package com.dicoding.thegreatasean.ui
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
@@ -22,6 +23,7 @@ class MovedActivity : AppCompatActivity() {
         val countryViewDataReceived: ImageView = findViewById(R.id.countryView_data_received)
         val headOfStatePhoto: ImageView = findViewById(R.id.iv_head_of_state)
         val headOfStateName: TextView = findViewById(R.id.tv_head_of_state)
+        val countryLink: TextView = findViewById(R.id.see_more_link)
 
         val name = intent.getStringExtra(EXTRA_NAME)
         val detail = intent.getStringExtra(EXTRA_DETAIL)
@@ -29,6 +31,7 @@ class MovedActivity : AppCompatActivity() {
         val countryView = intent.getIntExtra(EXTRA_COUNTRYVIEW, 0)
         val headPhoto = intent.getIntExtra(EXTRA_HEADOFSTATEPHOTO, 0)
         val headName = intent.getStringExtra(EXTRA_HEADOFSTATENAME)
+        val link = intent.getStringExtra(EXTRA_LINK)
 
         countryViewDataReceived.setImageResource(countryView)
         flagDataReceived.setImageResource(flag)
@@ -42,6 +45,13 @@ class MovedActivity : AppCompatActivity() {
         headOfStatePhoto.setImageResource(headPhoto)
         val textHeadName = "$headName"
         headOfStateName.text = textHeadName
+
+        val textLink = "$link"
+        countryLink.setOnClickListener {
+            val uri = Uri.parse(textLink)
+            val intent = Intent(Intent.ACTION_VIEW, uri)
+            startActivity(intent)
+        }
 
         movedToolbar = findViewById(R.id.moved_toolbar)
         movedToolbar.title = "$name"
@@ -68,5 +78,6 @@ class MovedActivity : AppCompatActivity() {
         const val EXTRA_COUNTRYVIEW = "extra_country_view"
         const val EXTRA_HEADOFSTATEPHOTO = "extra_head_of_state_photo"
         const val EXTRA_HEADOFSTATENAME = "extra_head_of_state_name"
+        const val EXTRA_LINK = "extra_link"
     }
 }

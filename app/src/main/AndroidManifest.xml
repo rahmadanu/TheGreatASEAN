@@ -13,6 +13,7 @@
         <activity android:name=".ui.MainActivity" />
         <activity
             android:name=".ui.MovedActivity"
+            android:exported="true"
             android:theme="@style/Theme.TheGreatASEAN.NoActionBar"/>
         <activity
             android:name=".ui.AboutActivity"
